@@ -30,7 +30,7 @@ const PostDetails = ({ post }) => {
         />
         <meta name="title" content={post.title} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content="dynamic" />
         <meta property="og:title" content={post.title} />
         <meta
           property="og:description"
@@ -39,7 +39,7 @@ const PostDetails = ({ post }) => {
         <meta property="og:image" content={post.featuredImage.url} />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:url" content="dynamic" />
         <meta property="twitter:title" content={post.title} />
         <meta
           property="twitter:description"

@@ -1,4 +1,5 @@
 import moment from 'moment'
+import Image from 'next/image'
 import React from 'react'
 import { AiOutlineCalendar } from 'react-icons/ai'
 
@@ -68,12 +69,13 @@ const PostDetail = ({ post }) => {
         />
       </div>
       <div className="px-4 lg:px-0">
-        <div className="flex items-center mb-8 w-full ">
-          <div className="flex  items-center justify-center mb-4 lg:mb-0  lg:w-auto mr-8 ">
-            <img
+        <div className="flex justify-center mb-8 w-full ">
+          <div className="flex align-middle justify-center mb-4 lg:mb-0  lg:w-auto mr-8 ">
+            <Image
+              unoptimized
               alt={post.author.name}
-              width="30px"
-              height="30px"
+              width="30"
+              height="30"
               className="align-middle rounded"
               src={post.author.photo.url}
             />
