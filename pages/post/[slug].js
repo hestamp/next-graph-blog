@@ -1,7 +1,7 @@
 import React from 'react'
 import { getPosts, getPostDetails } from '../../services'
 import { useRouter } from 'next/router'
-
+import Head from 'next/head'
 import {
   PostDetail,
   Categories,
@@ -12,12 +12,51 @@ import {
   Loader,
 } from '../../components'
 const PostDetails = ({ post }) => {
+  const postObj = post
+
+  console.log(postObj)
   const router = useRouter()
   if (router.isFallback) {
     return <Loader />
   }
   return (
     <div className="container mx-auto lg:px-10 px-6 mb-8">
+      <Head>
+        <title>{post.title} - Climate War</title>
+
+        <meta
+          name="description"
+          content={`${post.excerpt} ${post.title} - Climate War`}
+        />
+        <meta name="title" content={post.title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:title" content={post.title} />
+        <meta
+          property="og:description"
+          content={`${post.excerpt} ${post.title} - Climate War`}
+        />
+        <meta property="og:image" content={post.featuredImage.url} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={window.location.href} />
+        <meta property="twitter:title" content={post.title} />
+        <meta
+          property="twitter:description"
+          content={`${post.excerpt} ${post.title} - Climate War`}
+        />
+        <meta property="twitter:image" content={post.featuredImage.url} />
+        <meta name="keywords" content={post.title.split(' ').join(',')} />
+        <meta name="robots" content="index, follow" />
+        <meta
+          http-equiv="Content-Type"
+          content="text/html; charset=utf-8"
+        ></meta>
+        <meta name="language" content="English" />
+        <meta name="author" content={post.author.name} />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           <PostDetail post={post} />
