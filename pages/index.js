@@ -7,7 +7,7 @@ export default function Home({ posts }) {
     <div className="container mx-auto lg:px-10 px-6 mb-8">
       <Head>
         <title>Climate Blog</title>
-        <meta name="description" content="Test app next js" />
+        <meta name="description" content="Test blog by Tom Hestamp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
