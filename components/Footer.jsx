@@ -7,6 +7,7 @@ export const Footer = () => {
         <div className="flex">
           <a
             target="_blank"
+            rel="noreferrer"
             className="flex font-semibold justify-center rounded-md p-1  hover:bg-black/50"
             alt="Solomon Anomet O'jay"
             href="https://www.instagram.com/solomonojay/"
@@ -22,6 +23,7 @@ export const Footer = () => {
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             className="flex font-semibold justify-center rounded-md p-1  hover:bg-black/50"
             alt="Fridays For Future Uganda"
             href="https://twitter.com/Fridays4FutureU"
@@ -38,6 +40,7 @@ export const Footer = () => {
 
           <a
             target="_blank"
+            rel="noreferrer"
             className=" flex font-semibold justify-center rounded-md p-1  hover:bg-black/50"
             alt="Earth Volunteers"
             href="https://earthvolunteers.org/"
@@ -55,6 +58,7 @@ export const Footer = () => {
 
         <a
           target="_blank"
+          rel="noreferrer"
           className="flex font-semibold justify-center rounded-md py-1"
           href="http://hestamp.me/"
         >
