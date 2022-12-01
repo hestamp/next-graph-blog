@@ -69,6 +69,9 @@ const PostDetail = ({ post }) => {
         />
       </div>
       <div className="px-4 lg:px-0">
+        <h1 className="flex justify-center mb-8 text-3xl font-semibold">
+          {post.title}
+        </h1>
         <div className="flex justify-center mb-8 w-full ">
           <div className="flex align-middle justify-center mb-4 lg:mb-0  lg:w-auto mr-8 ">
             <Image
@@ -90,7 +93,7 @@ const PostDetail = ({ post }) => {
             </span>
           </div>
         </div>
-        <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
+
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemIndex) =>
             getContentFragment(itemIndex, item.text, item)

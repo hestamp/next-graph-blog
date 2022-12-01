@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getCategories } from '../services'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Header = () => {
   const [categories, setCategories] = useState([])
@@ -10,13 +11,11 @@ const Header = () => {
   }, [])
 
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className="border-b w-full inline-block border-teal-600 py-8">
-        <div className="md:float-left block">
+    <div className="container  mx-auto px-10 mb-8">
+      <div className="border-b  border-gray-400  w-full inline-block py-4">
+        <div className="md:float-left  justify-center flex lg:block ">
           <Link href="/">
-            <span className="cursor-pointer font-bold text-4xl text-black">
-              Climate War
-            </span>
+            <Image unoptimized width="120" height="40" src="climate-war.png" />
           </Link>
         </div>
         <div className="hidden md:float-left md:contents">

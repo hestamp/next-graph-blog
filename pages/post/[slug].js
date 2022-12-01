@@ -1,5 +1,6 @@
 import React from 'react'
 import { getPosts, getPostDetails } from '../../services'
+import { AdjacentPosts } from '../../sections'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import {
@@ -14,8 +15,8 @@ import {
 const PostDetails = ({ post }) => {
   const postObj = post
 
-  console.log(postObj)
   const router = useRouter()
+
   if (router.isFallback) {
     return <Loader />
   }
@@ -30,16 +31,22 @@ const PostDetails = ({ post }) => {
         />
         <meta name="title" content={post.title} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="dynamic" />
+        <meta
+          property="og:url"
+          content={`http://localhost:3000${router.asPath}`}
+        />
         <meta property="og:title" content={post.title} />
         <meta
           property="og:description"
-          content={`${post.excerpt} ${post.title} - Climate War`}
+          content={`${post.excerpt} - Climate War`}
         />
         <meta property="og:image" content={post.featuredImage.url} />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="dynamic" />
+        <meta
+          property="twitter:url"
+          content={`http://localhost:3000/${router.asPath}`}
+        />
         <meta property="twitter:title" content={post.title} />
         <meta
           property="twitter:description"
@@ -49,7 +56,7 @@ const PostDetails = ({ post }) => {
         <meta name="keywords" content={post.title.split(' ').join(',')} />
         <meta name="robots" content="index, follow" />
         <meta
-          http-equiv="Content-Type"
+          httpEquiv="Content-Type"
           content="text/html; charset=utf-8"
         ></meta>
         <meta name="language" content="English" />
@@ -57,11 +64,11 @@ const PostDetails = ({ post }) => {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 gap-0">
         <div className="col-span-1 lg:col-span-8">
           <PostDetail post={post} />
           <Author author={post.author} />
-
+          <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
           <Comments slug={post.slug} />
           <CommentsForm slug={post.slug} />
         </div>
