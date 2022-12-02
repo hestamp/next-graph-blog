@@ -25,10 +25,7 @@ const PostDetails = ({ post }) => {
       <Head>
         <title>{post.title} - Climate War</title>
 
-        <meta
-          name="description"
-          content={`${post.excerpt} ${post.title} - Climate War`}
-        />
+        <meta name="description" content={`${post.excerpt} Climate War`} />
         <meta name="title" content={post.title} />
         <meta property="og:type" content="website" />
         <meta
@@ -50,7 +47,7 @@ const PostDetails = ({ post }) => {
         <meta property="twitter:title" content={post.title} />
         <meta
           property="twitter:description"
-          content={`${post.excerpt} ${post.title} - Climate War`}
+          content={`${post.excerpt} Climate War`}
         />
         <meta property="twitter:image" content={post.featuredImage.url} />
         <meta name="keywords" content={post.title.split(' ').join(',')} />

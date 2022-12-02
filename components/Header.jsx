@@ -11,11 +11,16 @@ const Header = () => {
   }, [])
 
   return (
-    <div className="container  mx-auto px-10 mb-8">
-      <div className="border-b  border-gray-400  w-full inline-block py-4">
+    <div className="rounded-b-lg shadow-md container bg-white px-12 mx-auto  mb-8">
+      <div className="   w-full inline-block py-4">
         <div className="md:float-left  justify-center flex lg:block ">
           <Link href="/">
-            <Image unoptimized width="120" height="40" src="climate-war.png" />
+            <Image
+              alt="Logo Climate War"
+              width="120"
+              height="40"
+              src="/climate-war.png"
+            />
           </Link>
         </div>
         <div className="hidden md:float-left md:contents">

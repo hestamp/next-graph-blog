@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import moment from 'moment'
 import Link from 'next/link'
 import { getRecentPosts, getSimilarPosts } from '../services'
 import Image from 'next/image'
@@ -18,9 +17,11 @@ const PostWidget = ({ categories, slug }) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
-      <h3 className="text-xl mb-8 fond-semibold border-b pb-4">
-        {slug ? 'Related Posts' : 'Recent Posts'}
-      </h3>
+      <div className="flex  justify-center">
+        <h3 className="text-xl border-b mb-4 fond-semibold  pb-2">
+          {slug ? 'Related Posts' : 'Recent Posts'}
+        </h3>
+      </div>
       {relatedPosts.map((post) => (
         <div key={post.title} className="flex items-center w-full mb-4">
           <Link href={`/post/${post.slug}`} className="w-16 flex-none">
@@ -37,9 +38,6 @@ const PostWidget = ({ categories, slug }) => {
             <Link href={`/post/${post.slug}`} className="text-md">
               {post.title}
             </Link>
-            <p className="text-gray-500 font-xs">
-              {moment(post.createdAt).format('MMM DD, YYYY')}
-            </p>
           </div>
         </div>
       ))}

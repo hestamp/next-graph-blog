@@ -14,13 +14,19 @@ export default function Home({ posts }) {
         <meta property="og:url" content="https://clim.vercel.app/" />
         <meta property="og:title" content="Climate War" />
         <meta property="og:description" content="Climate War" />
-        <meta property="og:image" content="Climate War" />
+        <meta
+          property="og:image"
+          content="https://clim.vercel.app/climate-war.png"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://clim.vercel.app/" />
         <meta property="twitter:title" content="Climate War" />
         <meta property="twitter:description" content="Climate War" />
-        <meta property="twitter:image" content="Climate War" />
+        <meta
+          property="twitter:image"
+          content="https://clim.vercel.app/climate-war.png"
+        />
         <meta name="keywords" content="Climate,War" />
         <meta name="robots" content="index, follow" />
         <meta

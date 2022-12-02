@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export const Footer = () => {
   return (
-    <div className="container static mx-auto px-10 ">
-      <div className="border-t border-gray-400  w-full flex justify-between py-4 xs:py-3">
+    <div className="container shadow-md rounded-t-lg bg-white static mx-auto px-10 ">
+      <div className="  w-full flex justify-between py-4 xs:py-3">
         <div className="flex">
           <a
             target="_blank"
